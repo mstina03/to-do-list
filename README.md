@@ -21,7 +21,7 @@ This code is hosed on GitHub Pages https://mstina03.github.io/to-do-list/
 
 3. As a user, I want to delete tasks so that I can clean up completed or irrelevant items.
 
-<br>
+---
 
 # Getting Started with Create React App
 
