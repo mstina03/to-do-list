@@ -21,6 +21,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+  margin-left: 40px;
+  max-width: 95%;
 }
 
 

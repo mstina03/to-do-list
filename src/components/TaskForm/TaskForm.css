@@ -1,6 +1,6 @@
 .task-form {
     width: 97%;
-    height: 200px;
+    height: 220px;
     border-radius: 10px;
     background-color: rgb(175, 11, 134);
     box-shadow: 10px 10px 10px 10px black;
@@ -16,12 +16,22 @@
     margin-left: 15px;
     padding: 6px;
     width: 50%;
-    
+
 }
+
 
 .form-row {
     margin: 8px auto;
     font-size: 20px;
+    margin-bottom: 1rem;
+
+}
+
+.form-row label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
 }
 
 

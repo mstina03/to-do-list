@@ -8,7 +8,7 @@ const TaskForm = ({ addTask }) => {
         const notesField = document.querySelector('[name=notes]');
 
         const taskValue = taskField.value;
-        const notesValue = taskField.value;
+        const notesValue = notesField.value;
 
         taskField.value = '';
         notesField.value = '';
@@ -22,21 +22,21 @@ const TaskForm = ({ addTask }) => {
             <form action="#" method="GET" onSubmit={handleSubmit}>
 
                 <div className='form-row'>
-                    <label>
+                    <label className='labelTag'>
                         Task:
                         <input type="text" name="task" placeholder="Add a task" />
                     </label>
 
                 </div>
                 <div className='form-row'>
-                    <label>
-                        Notes:
+                    <label className='labelTag'>
+                        Note:
                         <input type="text" name="notes" placeholder="Add any notes" />
                     </label>
 
                 </div>
                 <div className='form-row'>
-                    <button type='submit'>Add Task</button>
+                    <button type='submit'>Add</button>
 
                 </div>
             </form>
