@@ -1,3 +1,28 @@
+# To-Do List
+
+## Tina Smith
+
+
+### Overview of the project:
+This my implementation of a task tracker using React technologies. 
+This code is hosed on GitHub Pages https://mstina03.github.io/to-do-list/
+
+### Technologies Used: 
+1. React
+2. css
+3. jsx
+
+
+### User Stories
+
+1. As a user, I want to add new tasks so that I can keep track of what I need to do.
+
+2. As a user, I want to add optional notes to tasks so that I can remember details or deadlines.
+
+3. As a user, I want to delete tasks so that I can clean up completed or irrelevant items.
+
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
