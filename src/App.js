@@ -1,6 +1,8 @@
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
 import { useState } from 'react';
 import TaskForm from './components/TaskForm/TaskForm';
+import ContactForm from './components/ContactForm/ContactForm';
 import TaskContainer from './components/TaskContainer/TaskContainer';
 import './components/TaskContainer/TaskContainer.css'
 
@@ -13,14 +15,15 @@ function App() {
     { front: 'Pay water bill', back: 'Due the 15th of the month' },
     { front: 'Pay cable bill', back: 'Due the 20th of the month' },
     { front: 'Pay student loan', back: 'Due the 25th of the month' },
-    
+
 
   ]);
 
-  const addTask = (front, back) => {
-    const newTaks = [...tasks, { front, back }];
 
-    setTasks(newTaks);
+  const addTask = (front, back) => {
+    const newTasks = [...tasks, { front, back }];
+
+    setTasks(newTasks);
   }
 
   const deleteTask = (front) => {
@@ -29,21 +32,45 @@ function App() {
 
   }
 
+  const addContact = (front, back) => {
+    const newContacts = [...tasks, { front, back }];
 
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Task List</h1>
-        </header>
-        <main >
-
-          <TaskForm addTask={addTask} />
-          <TaskContainer tasks={tasks} deleteTask={deleteTask} />
-
-        </main>
-      </div>
-    );
+     //setContactss(newContacts);
   }
+
+
+  return (
+    <div className="App">
+      <NavBar />
+      <header className="App-header">
+        
+      </header>
+      <main >
+
+        <section id="addnew">
+          <TaskForm addTask={addTask} />
+        </section>
+
+        <h1>Task List</h1>
+        <section id="tasks">
+          <TaskContainer tasks={tasks} deleteTask={deleteTask} />
+        </section>
+
+        <section id='addcontact'>
+          <h1>Add Contact</h1>
+          <ContactForm addContact={addContact} />
+
+        </section>
+
+        <section id='contacts'>
+          <h1>Contact List</h1>
+          
+        </section>
+
+      </main>
+    </div>
+  );
+}
 
 
 export default App;
