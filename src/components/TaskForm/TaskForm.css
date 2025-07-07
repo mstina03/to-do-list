@@ -45,4 +45,11 @@
     color: white;
     font-size: 18px;
     height: 40px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgba(220, 155, 203);
+    color: black;
+    
 }

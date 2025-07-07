@@ -1,22 +1,23 @@
+/* App container styled like a notebook on black desk */
 .App {
   text-align: center;
   min-height: 100vh;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  max-width: 90vw;
+  margin: 2rem auto;
+  padding: 2rem 2rem 2rem 4rem;
+  background: repeating-linear-gradient(white, white 29px, #fce4ec 30px);
+  /* light pink line every 30px */
+  border: 1px solid #ff69b4;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+  /* soft hot pink glow */
+  font-family: 'Georgia', serif;
+  line-height: 30px;
+  position: relative;
 }
 
 .App-header {
-  display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -24,8 +25,6 @@
   margin-left: 40px;
   max-width: 95%;
 }
-
-
 
 .App {
   max-width: 100vh;
@@ -42,7 +41,6 @@
   line-height: 30px;
 }
 
-/* Red left margin line */
 .App::before {
   content: '';
   position: absolute;
@@ -50,11 +48,13 @@
   left: 60px;
   bottom: 0;
   width: 2px;
-  background-color: #ff4b5c;
+  background-color: rgb(175, 11, 134);
 }
 
-/* Optional: give it a textured look */
 body {
-
   background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
 }
+
