@@ -59,22 +59,23 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 You must manually push updates using: npm run deploy
 
 #### Why?
-The gh-pages branch is not tracked like main — it only gets updated when you:
+* The gh-pages branch is not tracked like main — it only gets updated when you:
 
-Run npm run build (via predeploy)
+* Run npm run build (via predeploy)
 
-Run gh-pages -d build (via deploy)
+* Run gh-pages -d build (via deploy)
 
-This copies your build/ folder into the gh-pages branch and pushes it.
+* This copies your build/ folder into the gh-pages branch and pushes it.
 
 #### When should I run npm run deploy?
+
 Any time you:
 
-Change your code (JSX, CSS, etc.)
+* Change your code (JSX, CSS, etc.)
 
-Add or remove components
+* Add or remove components
 
-Update content or logic
+* Update content or logic
 
 ### `npm run eject`
 
