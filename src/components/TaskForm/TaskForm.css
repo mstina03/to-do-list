@@ -1,5 +1,5 @@
 .task-form {
-    width: 97vh;
+    width: 97%;
     height: 200px;
     border-radius: 10px;
     background-color: rgb(175, 11, 134);
@@ -15,7 +15,7 @@
 .task-form input {
     margin-left: 15px;
     padding: 6px;
-    width: 50vh;
+    width: 50%;
     
 }
 
@@ -23,6 +23,7 @@
     margin: 8px auto;
     font-size: 20px;
 }
+
 
 .task-form button {
     padding: 6px;
