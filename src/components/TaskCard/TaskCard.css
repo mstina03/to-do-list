@@ -1,0 +1,38 @@
+.task-card {
+    box-shadow: 3px 3px 8px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 40px;
+    font-size: 20px;
+    background-color: rgb(175, 11, 134, .1);
+    display: inline-block;
+    width: 95vh;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+
+
+}
+
+.delete-task {
+    font-weight: bold;
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.delete-task:hover {
+    background-color: lightgrey;
+}
