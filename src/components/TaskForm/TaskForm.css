@@ -30,4 +30,8 @@
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     width: 15vh;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    height: 40px;
 }
