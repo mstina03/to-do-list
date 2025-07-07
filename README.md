@@ -4,7 +4,8 @@
 
 
 ### Overview of the project:
-This my implementation of a task tracker using React technologies. 
+This my implementation of a task tracker using React technologies.  
+ 
 This code is hosed on GitHub Pages https://mstina03.github.io/to-do-list/
 
 ### Technologies Used: 
