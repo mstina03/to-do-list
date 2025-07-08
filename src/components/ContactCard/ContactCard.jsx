@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContactCard.css';
 
-export default function ContactCard({ front, back, deleteContact }) {
+export default function ContactCard({ id, front, back, deleteContact }) {
     const [isFront, setFront] = React.useState(true);
 
     const cardContent = isFront
@@ -13,12 +13,13 @@ export default function ContactCard({ front, back, deleteContact }) {
     const handleDelete = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        deleteContact(front); // you were using 'front' as the unique key
+        deleteContact(id); // ✅ Use ID, not front
     };
+    console.log('Rendering ContactCard:', front);
 
     return (
         <div className='contact-card' onClick={handleFlip}>
-            <span className='delete-contact' onClick={handleDelete}>Delete</span>
+            <button className='delete-contact' onClick={handleDelete}>Delete</button>
             {cardContent}
         </div>
     );
