@@ -1,0 +1,45 @@
+.contact-card {
+    box-shadow: 3px 3px 8px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 40px auto;
+    font-size: 20px;
+    background-color: rgba(175, 11, 134, 0.1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-align: left;
+    width: 90%;
+    min-height: 80px;
+    /* ✅ Ensures text is visible */
+    border: 2px solid hotpink;
+
+}
+
+
+.contact-card:hover {
+    transform: scale(1.02);
+}
+
+
+.delete-contact {
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px 8px rgb(227, 153, 207);
+}
+
+.delete-contact:hover, .complete-contact:hover {
+    background-color: lightgrey;
+}
