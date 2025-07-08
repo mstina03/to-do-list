@@ -1,10 +1,12 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
 import { useState } from 'react';
+import NavBar from './components/NavBar/NavBar';
 import TaskForm from './components/TaskForm/TaskForm';
 import ContactForm from './components/ContactForm/ContactForm';
 import TaskContainer from './components/TaskContainer/TaskContainer';
-import './components/TaskContainer/TaskContainer.css'
+import ContactContainer from './components/ContactContainer/ContactContainer';
+import './components/TaskContainer/TaskContainer.css';
+import './components/ContactContainer/ContactContainer.css';
 
 
 function App() {
@@ -19,6 +21,16 @@ function App() {
 
   ]);
 
+  const [contacts, setContacts] = useState([
+    { front: 'Jane Doe', back: '555-1234' },
+    { front: 'John Smith', back: 'john@example.com' },
+
+
+  ]);
+
+  console.log(contacts);
+  console.log("Contacts length:", contacts.length);
+  console.log("Contacts array:", contacts);
 
   const addTask = (front, back) => {
     const newTasks = [...tasks, { front, back }];
@@ -33,11 +45,20 @@ function App() {
   }
 
   const addContact = (front, back) => {
-    const newContacts = [...tasks, { front, back }];
+    const newContacts = [...contacts, { front, back }];
 
-    //setContactss(newContacts);
+    setContacts(newContacts);
   }
 
+
+
+  const deleteContact = (id) => {
+    const updatedContacts = contacts.filter((_, index) => index !== id);
+    setContacts(updatedContacts);
+  };
+
+ 
+  
 
   return (
     <div className="App">
@@ -58,15 +79,16 @@ function App() {
         </section>
 
         <section id='addcontact'>
-        
+
           <ContactForm addContact={addContact} />
 
         </section>
 
         <section id='contacts'>
           <h1>Contact List</h1>
-
+          <ContactContainer contacts={contacts} deleteContact={deleteContact} />
         </section>
+
 
       </main>
     </div>
