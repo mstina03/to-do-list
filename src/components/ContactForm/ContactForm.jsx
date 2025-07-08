@@ -1,30 +1,25 @@
 import './ContactForm.css';
 
 const ContactForm = ({ addContact }) => {
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const nameField = document.querySelector('[name=name]');
-        const phoneField = document.querySelector('[name=phone]');
-        const emailField = document.querySelector('[name=email]');
-        const addressField = document.querySelector('[name=address]');
-        const notesField = document.querySelector('[name=notes]');
+        const form = e.target;
 
-        const nameValue = nameField.value;
-        const phoneValue = phoneField.value;
-        const emailValue = emailField.value;
-        const addressValue = addressField.value;
-        const notesValue = notesField.value;
+        const name = form.querySelector('[name=name]').value;
+        const phone = form.querySelector('[name=phone]').value;
+        const email = form.querySelector('[name=email]').value;
+        const address = form.querySelector('[name=address]').value;
+        const notes = form.querySelector('[name=notes]').value;
 
-        nameField.value = '';
-        phoneField.value = '';
-        emailField.value = '';
-        addressField.value = '';
-        notesField.value = '';
+        console.log("Notes:", notes); // should not be null now
 
-        addContact(nameValue, phoneValue, emailValue, addressValue, notesValue);
+        addContact(name, phone, email, address, notes);
 
-    }
+        form.reset();
+    };
+      
     return (
         <section className='contact-form'>
             <h2> New Contact</h2>
@@ -54,14 +49,14 @@ const ContactForm = ({ addContact }) => {
                 <div className='form-row'>
                     <label>
                         Addr :
-                        <input type="text" name="address" placeholder="Enter Address" />
+                        <input type="text" name="address" placeholder="Enter Mailing Address" />
                     </label>
 
                 </div>
                 <div className='form-row'>
                     <label>
                         Notes:
-                        <input type="text" name="notes" placeholder="Notes" />
+                        <input type="text" name="notes" placeholder="Add Any Notes Here" />
                     </label>
 
                 </div>
