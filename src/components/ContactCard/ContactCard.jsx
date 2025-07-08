@@ -2,6 +2,8 @@ import React from 'react';
 import './ContactCard.css';
 
 export default function ContactCard({ id, front, back, deleteContact }) {
+    console.log("Rendering contact:", front, back);
+
     const [isFront, setFront] = React.useState(true);
 
     const cardContent = isFront

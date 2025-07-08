@@ -2,21 +2,18 @@
     box-shadow: 3px 3px 8px black;
     border-radius: 10px;
     padding: 10px;
-    margin: 40px auto;
-    font-size: 20px;
+    margin: 20px;
+    font-size: 18px;
     background-color: rgba(175, 11, 134, 0.1);
     display: flex;
     flex-direction: column;
+    width: 250px;
+    min-height: 100px;
     cursor: pointer;
     user-select: none;
     position: relative;
-    text-align: left;
-    width: 90%;
-    min-height: 80px;
-    /* ✅ Ensures text is visible */
-    border: 2px solid hotpink;
-
 }
+
 
 
 .contact-card:hover {
