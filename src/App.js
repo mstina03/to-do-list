@@ -29,6 +29,8 @@ function App() {
   ]);
 
   console.log(contacts);
+  console.log("Contacts length:", contacts.length);
+  console.log("Contacts array:", contacts);
 
   const addTask = (front, back) => {
     const newTasks = [...tasks, { front, back }];
@@ -55,7 +57,8 @@ function App() {
     setContacts(updatedContacts);
   };
 
-
+ 
+  
 
   return (
     <div className="App">

@@ -15,6 +15,7 @@ export default function ContactCard({ id, front, back, deleteContact }) {
         e.stopPropagation();
         deleteContact(id); // ✅ Use ID, not front
     };
+    console.log('Rendering ContactCard:', front);
 
     return (
         <div className='contact-card' onClick={handleFlip}>
