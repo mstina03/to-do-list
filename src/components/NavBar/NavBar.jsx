@@ -12,9 +12,9 @@ const NavBar = () => {
             <h2 className="nav-logo">📓 My Notebook</h2>
 
             <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-                <li><a href="#tasks" onClick={closeMenu}>Tasks</a></li>
+                <li><a href="#tasks" onClick={closeMenu}>View Tasks</a></li>
                 <li><a href="#addnew" onClick={closeMenu}>Add Task</a></li>
-                <li><a href="#contacts" onClick={closeMenu}>Contacts</a></li>
+                <li><a href="#contacts" onClick={closeMenu}>View Contacts</a></li>
                 <li><a href="#addcontact" onClick={closeMenu}>Add Contact</a></li>
             </div>
 

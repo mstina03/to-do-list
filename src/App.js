@@ -35,7 +35,7 @@ function App() {
   const addContact = (front, back) => {
     const newContacts = [...tasks, { front, back }];
 
-     //setContactss(newContacts);
+    //setContactss(newContacts);
   }
 
 
@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <NavBar />
       <header className="App-header">
-        
+
       </header>
       <main >
 
@@ -51,20 +51,21 @@ function App() {
           <TaskForm addTask={addTask} />
         </section>
 
-        <h1>Task List</h1>
+
         <section id="tasks">
+          <h1>Task List</h1>
           <TaskContainer tasks={tasks} deleteTask={deleteTask} />
         </section>
 
         <section id='addcontact'>
-          <h1>Add Contact</h1>
+        
           <ContactForm addContact={addContact} />
 
         </section>
 
         <section id='contacts'>
           <h1>Contact List</h1>
-          
+
         </section>
 
       </main>

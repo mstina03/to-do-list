@@ -46,10 +46,12 @@
     font-size: 18px;
     height: 40px;
     font-weight: bold;
+    box-shadow: 3px 3px 8px rgb(227, 153, 207);
+
 }
 
 button:hover {
     background-color: rgba(220, 155, 203);
     color: black;
-    
+
 }
