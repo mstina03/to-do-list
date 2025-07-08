@@ -1,30 +1,29 @@
-.task-card {
+.contact-card {
     box-shadow: 3px 3px 8px black;
     border-radius: 10px;
     padding: 10px;
-    margin: 40px;
+    margin: 40px auto;
     font-size: 20px;
-    background-color: rgb(175, 11, 134, .1);
-    display: inline-block;
-    width: 95%;
-    height: 30px;
+    background-color: rgba(175, 11, 134, 0.1);
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     cursor: pointer;
     user-select: none;
     position: relative;
     text-align: left;
-
+    width: 90%;
+    min-height: 80px;
+    /* ✅ Ensures text is visible */
+    border: 2px solid hotpink;
 
 }
 
-.task-card:hover {
+
+.contact-card:hover {
     transform: scale(1.02);
 }
 
-.complete-task {
+.complete-contact {
     font-weight: bold;
     font-size: 18px;
     border: 2px solid black;
@@ -40,7 +39,7 @@
     box-shadow: 3px 3px 8px rgb(227, 153, 207);
 }
 
-.delete-task {
+.delete-contact {
     font-weight: bold;
     font-size: 18px;
     border: 2px solid black;
@@ -56,6 +55,6 @@
     box-shadow: 3px 3px 8px rgb(227, 153, 207);
 }
 
-.delete-task:hover, .complete-task:hover {
+.delete-contact:hover, .complete-contact:hover {
     background-color: lightgrey;
 }
