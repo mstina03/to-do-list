@@ -18,13 +18,22 @@ function App() {
   ]);
 
   const [contacts, setContacts] = useState([
-    { front: 'Jane Doe', back: '555-1234' },
-    { front: 'John Smith', back: 'john@example.com' },
+    {
+      name: 'Jane Doe',
+      phone: '205-555-1234',
+      email: 'jane@example.com',
+      address: '123 Main St',
+      notes: 'Met at conference'
+    },
+    {
+      name: 'John Smith',
+      phone: '205-555-5678',
+      email: 'john@example.com',
+      address: '456 Oak Ave',
+      notes: 'Friend from college'
+    }
   ]);
-
-  console.log(contacts);
-  console.log("Contacts length:", contacts.length);
-  console.log("Contacts array:", contacts);
+  
 
   const addTask = (front, back) => {
     const newTasks = [...tasks, { front, back }];
@@ -36,10 +45,12 @@ function App() {
     setTasks(newTasks);
   };
 
-  const addContact = (front, back) => {
-    const newContacts = [...contacts, { front, back }];
-    setContacts(newContacts);
+  const addContact = (name, phone, email, address, notes) => {
+    const newContact = { name, address, phone, email, notes };
+    setContacts([...contacts, newContact]);
   };
+  
+  
 
   const deleteContact = (id) => {
     const updatedContacts = contacts.filter((_, index) => index !== id);
