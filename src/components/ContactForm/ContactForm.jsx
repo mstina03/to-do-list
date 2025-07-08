@@ -13,7 +13,7 @@ const ContactForm = ({ addContact }) => {
         const address = form.querySelector('[name=address]').value;
         const notes = form.querySelector('[name=notes]').value;
 
-        console.log("Notes:", notes); // should not be null now
+        console.log("Notes:", notes); 
 
         addContact(name, phone, email, address, notes);
 

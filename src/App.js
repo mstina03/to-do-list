@@ -10,11 +10,23 @@ import './components/ContactContainer/ContactContainer.css';
 
 function App() {
   const [tasks, setTasks] = useState([
-    { front: 'Take package to post office', back: '' },
-    { front: 'Pay electric bill', back: 'Due the 5th of the month' },
-    { front: 'Pay water bill', back: 'Due the 15th of the month' },
-    { front: 'Pay cable bill', back: 'Due the 20th of the month' },
-    { front: 'Pay student loan', back: 'Due the 25th of the month' },
+    
+    {
+      front: 'Pay electric bill',
+      back: 'Due the 5th of the month'
+    },
+    {
+      front: 'Pay water bill',
+      back: 'Due the 15th of the month'
+    },
+    {
+      front: 'Pay cable bill',
+      back: 'Due the 20th of the month'
+    },
+    {
+      front: 'Pay student loan',
+      back: 'Due the 25th of the month'
+    },
   ]);
 
   const [contacts, setContacts] = useState([
@@ -22,18 +34,25 @@ function App() {
       name: 'Jane Doe',
       phone: '205-555-1234',
       email: 'jane@example.com',
-      address: '123 Main St',
+      address: '123 Main St Montgomery, AL',
       notes: 'Met at conference'
     },
     {
       name: 'John Smith',
       phone: '205-555-5678',
       email: 'john@example.com',
-      address: '456 Oak Ave',
+      address: '456 Oak Ave Birmingham, AL',
       notes: 'Friend from college'
+    },
+    {
+      name: 'Mary Smith',
+      phone: '334-327-5677',
+      email: 'mary@example.com',
+      address: '611 Oak Lane Selma, AL',
+      notes: 'Friend from high school'
     }
   ]);
-  
+
 
   const addTask = (front, back) => {
     const newTasks = [...tasks, { front, back }];
@@ -49,8 +68,8 @@ function App() {
     const newContact = { name, address, phone, email, notes };
     setContacts([...contacts, newContact]);
   };
-  
-  
+
+
 
   const deleteContact = (id) => {
     const updatedContacts = contacts.filter((_, index) => index !== id);
