@@ -8,7 +8,7 @@ export default function TaskCard({ front, back, deleteTask, completeTask }) {
 
     const cardContent = isFront ?
         <div className='card-front'> {front}</div> :
-        <div className='card-back'> Notes:{back}</div>;
+        <div className='card-back'> Notes: {back}</div>;
 
     const handleFlip = () => {
         setFront(!isFront);

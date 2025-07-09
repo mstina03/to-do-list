@@ -1,19 +1,21 @@
+import { useRef } from 'react';
 import './TaskForm.css';
 
 const TaskForm = ({ addTask }) => {
+    const taskRef = useRef();
+    const notesRef = useRef();
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const taskField = document.querySelector('[name=task]');
-        const notesField = document.querySelector('[name=notes]');
+        const task = taskRef.current.value;
+        const notes = notesRef.current.value;
 
-        const taskValue = taskField.value;
-        const notesValue = notesField.value;
+        addTask(task, notes);
 
-        taskField.value = '';
-        notesField.value = '';
-
-        addTask(taskValue, notesValue);
+        taskRef.current.value = '';
+        notesRef.current.value = '';
 
     }
     return (
@@ -22,16 +24,16 @@ const TaskForm = ({ addTask }) => {
             <form action="#" method="GET" onSubmit={handleSubmit}>
 
                 <div className='form-row'>
-                    <label className='labelTag'>
+                    <label>
                         Task:
-                        <input type="text" name="task" placeholder="Add a task" />
+                        <input type="text" name="task" placeholder="Add a task" ref={ taskRef} />
                     </label>
 
                 </div>
                 <div className='form-row'>
-                    <label className='labelTag'>
+                    <label>
                         Note:
-                        <input type="text" name="notes" placeholder="Add any notes" />
+                        <input type="text" name="notes" placeholder="Add any notes" ref={ notesRef} />
                     </label>
 
                 </div>
