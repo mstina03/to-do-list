@@ -1,12 +1,12 @@
 import './App.css';
 import { useState } from 'react';
 import NavBar from './components/NavBar/NavBar';
-import TaskForm from './components/TaskForm/TaskForm';
-import ContactForm from './components/ContactForm/ContactForm';
-import TaskContainer from './components/TaskContainer/TaskContainer';
-import ContactContainer from './components/ContactContainer/ContactContainer';
-import './components/TaskContainer/TaskContainer.css';
-import './components/ContactContainer/ContactContainer.css';
+import TaskForm from './components/Tasks/TaskForm';
+import ContactForm from './components/Contacts/ContactForm';
+import TaskContainer from './components/Tasks/TaskContainer';
+import ContactContainer from './components/Contacts/ContactContainer';
+import './components/Tasks/TaskContainer.css';
+import './components/Contacts/ContactContainer.css';
 
 function App() {
   const [tasks, setTasks] = useState([

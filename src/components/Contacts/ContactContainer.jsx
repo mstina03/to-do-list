@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactCard from '../ContactCard/ContactCard';
+import ContactCard from './ContactCard';
 
 const ContactContainer = ({ contacts, deleteContact }) => {
 

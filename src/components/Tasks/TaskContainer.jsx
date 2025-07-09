@@ -1,4 +1,4 @@
-import TaskCard from '../TaskCard/TaskCard';
+import TaskCard from './TaskCard';
 
 function TaskContainer({ tasks, deleteTask }) {
    
