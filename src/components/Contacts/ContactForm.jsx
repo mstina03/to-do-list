@@ -1,73 +1,77 @@
+import React, { useRef } from 'react';
 import './ContactForm.css';
 
 const ContactForm = ({ addContact }) => {
+    const nameRef = useRef();
+    const phoneRef = useRef();
+    const emailRef = useRef();
+    const addressRef = useRef();
+    const notesRef = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const form = e.target;
-
-        const name = form.querySelector('[name=name]').value;
-        const phone = form.querySelector('[name=phone]').value;
-        const email = form.querySelector('[name=email]').value;
-        const address = form.querySelector('[name=address]').value;
-        const notes = form.querySelector('[name=notes]').value;
-
-        console.log("Notes:", notes); 
+        const name = nameRef.current.value;
+        const phone = phoneRef.current.value;
+        const email = emailRef.current.value;
+        const address = addressRef.current.value;
+        const notes = notesRef.current.value;
 
         addContact(name, phone, email, address, notes);
 
-        form.reset();
+        // Reset fields manually
+        nameRef.current.value = '';
+        phoneRef.current.value = '';
+        emailRef.current.value = '';
+        addressRef.current.value = '';
+        notesRef.current.value = '';
     };
-      
+
     return (
         <section className='contact-form'>
-            <h2> New Contact</h2>
-            <form action="#" method="GET" onSubmit={handleSubmit}>
-
+            <h2>New Contact</h2>
+            <form onSubmit={handleSubmit}>
                 <div className='form-row'>
                     <label>
                         Name:
-                        <input type="text" name="name" placeholder="Enter Name" />
+                        <input type="text" name="name" placeholder="Enter Name" ref={nameRef} />
                     </label>
-
                 </div>
+
                 <div className='form-row'>
                     <label>
                         Phone:
-                        <input type="text" name="phone" placeholder="Enter Phone Number" />
+                        <input type="text" name="phone" placeholder="Enter Phone Number" ref={phoneRef} />
                     </label>
-
                 </div>
+
                 <div className='form-row'>
                     <label>
                         Email:
-                        <input type="text" name="email" placeholder="Enter Email Address" />
+                        <input type="text" name="email" placeholder="Enter Email Address" ref={emailRef} />
                     </label>
-
                 </div>
+
                 <div className='form-row'>
                     <label>
                         Addr :
-                        <input type="text" name="address" placeholder="Enter Mailing Address" />
+                        <input type="text" name="address" placeholder="Enter Mailing Address" ref={addressRef} />
                     </label>
-
                 </div>
+
                 <div className='form-row'>
                     <label>
                         Notes:
-                        <input type="text" name="notes" placeholder="Add Any Notes Here" />
+                        <input type="text" name="notes" placeholder="Enter Notes" ref={notesRef} />
                     </label>
-
                 </div>
 
                 <div className='form-row'>
                     <button type='submit'>Add</button>
-
                 </div>
             </form>
-
         </section>
-    )
-}
+    );
+};
+
 export default ContactForm;
