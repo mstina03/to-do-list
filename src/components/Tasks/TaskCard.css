@@ -10,12 +10,11 @@
     height: 30px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     cursor: pointer;
     user-select: none;
     position: relative;
     text-align: left;
+    border: 1px solid black;
 
 
 }
@@ -58,4 +57,21 @@
 
 .delete-task:hover, .complete-task:hover {
     background-color: lightgrey;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    cursor: pointer;
 }

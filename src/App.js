@@ -10,22 +10,26 @@ import './components/Contacts/ContactContainer.css';
 
 function App() {
   const [tasks, setTasks] = useState([
-    
+
     {
       front: 'Pay electric bill',
-      back: 'Due the 5th of the month'
+      back: 'Due the 5th of the month',
+      completed: false,
     },
     {
       front: 'Pay water bill',
-      back: 'Due the 15th of the month'
+      back: 'Due the 15th of the month',
+      completed: false,
     },
     {
       front: 'Pay cable bill',
-      back: 'Due the 20th of the month'
+      back: 'Due the 20th of the month',
+      completed: false,
     },
     {
       front: 'Pay student loan',
-      back: 'Due the 25th of the month'
+      back: 'Due the 25th of the month',
+      completed: false,
     },
   ]);
 
@@ -59,8 +63,8 @@ function App() {
     setTasks(newTasks);
   };
 
-  const deleteTask = (front) => {
-    const newTasks = tasks.filter(task => task.front !== front);
+  const deleteTask = (id) => {
+    const newTasks = tasks.filter((_, index) => index !== id);
     setTasks(newTasks);
   };
 
@@ -69,12 +73,20 @@ function App() {
     setContacts([...contacts, newContact]);
   };
 
-
-
   const deleteContact = (id) => {
     const updatedContacts = contacts.filter((_, index) => index !== id);
     setContacts(updatedContacts);
   };
+
+  const completeTask = (id) => {
+    const updatedTasks = tasks.map((task, index) =>
+      index === id ? { ...task, completed: !task.completed } : task
+    );
+    setTasks(updatedTasks);
+  };
+  
+  
+
 
   return (
     <div className="App">
@@ -88,7 +100,7 @@ function App() {
 
         <section id="tasks">
           <h1>Task List</h1>
-          <TaskContainer tasks={tasks} deleteTask={deleteTask} />
+          <TaskContainer tasks={tasks} deleteTask={deleteTask} completeTask={completeTask} />
         </section>
 
         <section id="addcontact">

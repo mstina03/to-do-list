@@ -2,39 +2,44 @@ import React from 'react';
 import './TaskCard.css';
 
 
-export default function TaskCard({ front, back, deleteTask, completeTask }) {
+export default function TaskCard({ id, front, back, completed, deleteTask, completeTask }) {
 
     const [isFront, setFront] = React.useState(true);
 
     const cardContent = isFront ?
-        <div className='card-front'> {front}</div> :
+        <div className={`card-front ${completed ? 'completed' : ''}`}> {front}</div> :
         <div className='card-back'> Notes: {back}</div>;
 
     const handleFlip = () => {
         setFront(!isFront);
     };
     const handleDelete = (e) => {
-        e.preventDefault();
+
         e.stopPropagation();
-        deleteTask(front);
+        deleteTask(id);
 
     }
 
     const handleComplete = (e) => {
-        e.preventDefault();
         e.stopPropagation();
-        completeTask(front);
+        completeTask(id);
+
 
     }
 
     return (
-        <div className='task-card' onClick={handleFlip}>
-            <span className='complete-task' onClick={handleComplete}>Complete</span>
-            <span className='delete-task' onClick={handleDelete}>Delete</span>
-            {cardContent}
+        <div className='task-card'>
+            <div className='task-actions'>
+                <span className='complete-task' onClick={handleComplete}>Complete</span>
+                <span className='delete-task' onClick={handleDelete}>Delete</span>
+            </div>
 
+            <div className='card-body' onClick={handleFlip}>
+                {cardContent}
+            </div>
         </div>
-    )
+    );
+
 }
 
 
