@@ -30,8 +30,8 @@ export default function TaskCard({ id, front, back, completed, deleteTask, compl
     return (
         <div className='task-card'>
             <div className='task-actions'>
-                <span className='complete-task' onClick={handleComplete}>Complete</span>
-                <span className='delete-task' onClick={handleDelete}>Delete</span>
+                <button className='complete-task' onClick={handleComplete}>Complete</button>
+                <button className='delete-task' onClick={handleDelete}>Delete</button>
             </div>
 
             <div className='card-body' onClick={handleFlip}>
